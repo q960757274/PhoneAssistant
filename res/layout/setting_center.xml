@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="设置中心"
+        android:textColor="#66ff00"
+        android:textSize="28sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/devide_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_show_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip" >
+
+        <TextView
+            android:id="@+id/tv_setting_show_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来电归属地设置"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_setting_show_location_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_setting_show_location"
+            android:text="来电归属地显示没有开启"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cb_setting_show_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_change_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip" >
+
+        <TextView
+            android:id="@+id/tv_setting_change_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来电归属地风格设置"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_setting_show_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_setting_change_bg"
+            android:text="半透明"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/jiantou1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_change_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip" >
+
+        <TextView
+            android:id="@+id/tv_setting_change_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="归属地提示框的位置"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_setting_change_location"
+            android:text="更改归属地提示框位置"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/jiantou1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_call_firewall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip" >
+
+        <TextView
+            android:id="@+id/tv_setting_call_firewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来电黑名单设置"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_setting_call_firewall_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_setting_call_firewall"
+            android:text="来电黑名单拦截没有开启"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cb_setting_call_firewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_applock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip" >
+
+        <TextView
+            android:id="@+id/tv_setting_applock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="程序锁设置"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_setting_applock_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_setting_applock"
+            android:text="程序锁服务没有开启"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cb_setting_applock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+
+</LinearLayout>

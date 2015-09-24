@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_taskmanger_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tv_taskmanager_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_taskmanger_icon"
+        android:text="程序名称"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_taskmanager_mem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_taskmanager_appname"
+        android:layout_marginTop="8dip"
+        android:layout_toRightOf="@id/iv_taskmanger_icon"
+        android:text="占用内存:"
+        android:textSize="14sp" />
+
+    <CheckBox 
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cb_taskmanager"
+        
+        />
+</RelativeLayout>

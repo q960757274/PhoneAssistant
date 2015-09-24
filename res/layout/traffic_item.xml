@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/iv_traffic_icon"
+        android:layout_width="53dip"
+        android:layout_height="53dip"
+        android:layout_marginLeft="5dip"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/iv_traffic_icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_traffic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="程序名"
+            android:textColor="#000000"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/app_traffic_send" />
+
+            <TextView
+                android:id="@+id/tv_traffic_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传"
+                android:textColor="#000000"
+                android:textSize="14dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:src="@drawable/app_traffic_down" />
+
+            <TextView
+                android:id="@+id/tv_traffic_rx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载"
+                android:textColor="#000000"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_traffic_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总计"
+            android:textColor="#000000"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+</RelativeLayout>

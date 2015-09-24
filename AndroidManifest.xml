@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guoshisp.mobilesafe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.guoshisp.mobilesafe" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.libowen.assistant.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.libowen.assistant.MainActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.SettingCenterActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.LostProtectedActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.Setup1Activity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.Setup2Activity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.Setup3Activity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.Setup4Activity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.SelectContactActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.AtoolsActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.NumberQueryActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.DragViewActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.CommonNumActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.CallSmsSafeActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.AppManagerActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.AppLockActivity" >
+        </activity>
+        <activity
+            android:name="com.libowen.assistant.EnterPwdActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity android:name="com.libowen.assistant.TaskManagerActivity" >
+        </activity>
+        <activity android:name="com.libowen.assistant.TrafficInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.libowen.assistant.AntiVirusActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.libowen.assistant.CleanCacheActivity" >
+        </activity>
+
+        <service android:name="com.libowen.assistant.service.ShowCallLocationService" >
+        </service>
+        <service android:name="com.libowen.assistant.service.CallFirewallService" >
+        </service>
+        <service android:name="com.libowen.assistant.service.WatchDogService" >
+        </service>
+        <service android:name="com.libowen.assistant.service.WatchDogService1" >
+        </service>
+
+        <receiver android:name="com.libowen.assistant.receiver.OutCallReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.libowen.assistant.receiver.BootCompleteReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.libowen.assistant.receiver.SmsReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.libowen.assistant.receiver.MyAdmin" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.libowen.assistant.provider.AppLockDBProvider"
+            android:authorities="com.guoshisp.applock" >
+        </provider>
+    </application>
+
+</manifest>

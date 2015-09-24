@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="高级工具"
+        android:textColor="#66ff00"
+        android:textSize="28sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/devide_line" />
+
+    <TextView
+         android:layout_marginTop="8dip"
+        android:id="@+id/tv_atools_address_query"
+        style="@style/text_content_style"
+        android:text="号码归属地查询" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+    <TextView
+         android:layout_marginTop="8dip"
+        android:id="@+id/tv_atools_common_num"
+        style="@style/text_content_style"
+        android:text="常用号码 查询" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+    
+        <TextView
+         android:layout_marginTop="8dip"
+        android:id="@+id/tv_atools_applock"
+        style="@style/text_content_style"
+        android:text="程 序 锁" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/listview_devider" >
+    </View>
+</LinearLayout>

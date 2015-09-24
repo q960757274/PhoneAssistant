@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_drag_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/change_locate" />
+
+    <TextView 
+        android:id="@+id/tv_drag_view"
+        android:layout_marginTop="60dip"
+        style="@style/text_content_style"
+        android:text="按住提示框拖动任意位置\n按手机返回键立刻生效"
+        android:background="@drawable/call_locate_blue"
+        />
+</RelativeLayout>
